@@ -1,0 +1,70 @@
+.Search {
+  text-align: center;
+}
+
+.Search-header {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Search-header h1 {
+  color: #2b2b2b;
+  font-size: 1.7em;
+}
+
+.Search-link {
+  color: #61dafb;
+}
+
+.Search-FieldAndButton {
+  width: 100%;
+}
+
+input.Search-TextField {
+  display: inline;
+  width: 40%;
+  margin: 10px 5px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px #2b2b2b solid;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.Search-FieldAndButton .btn.btn-primary {
+  margin: 10px 10px 5px;
+}
+
+.Search-FieldAndButton .btn {
+  display: inline-block;
+}
+
+.Product-each {
+  /* flex: 1 0 18%; */
+  min-width: 300px;
+  max-width: 300px;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  border: 2px #c1c1c1 solid;
+}
+
+@keyframes Search-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
