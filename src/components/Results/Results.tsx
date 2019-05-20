@@ -3,13 +3,19 @@ import './Results.css';
 
 import { GenericObject } from '../../controllers/type';
 
-class Results extends React.Component<any> {
+interface ResultProps {
+  data: GenericObject,
+  addToFaves: (prod: GenericObject) => void,
+  isRequesting: boolean,
+}
+
+class Results extends React.Component<ResultProps> {
 
   private products: GenericObject[];
   private productMap: GenericObject;
   private isNotFirstTime: boolean;
 
-  constructor(props: React.Props<string>) {
+  constructor(props: ResultProps) {
     super(props);
     this.products = [];
     this.productMap = {};

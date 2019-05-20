@@ -66,7 +66,7 @@ export default (state = initialState, action: Action) => {
 
 export const request = (searchTerm: string) => {
 
-  return (dispatch: (action: Action) => any) => {
+  return (dispatch: (action: Action) => void) => {
 
     dispatch({
       type: REQUEST_INITIATED,

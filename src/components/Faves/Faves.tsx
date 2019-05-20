@@ -3,11 +3,16 @@ import './Faves.css';
 
 import { GenericObject } from '../../controllers/type';
 
-class Faves extends React.Component<any> {
+interface FavesProps {
+  faves: GenericObject[],
+  removeFaves: (id: number) => void,
+};
+
+class Faves extends React.Component<FavesProps> {
 
   private favesMap: GenericObject;
 
-  constructor(props: React.Props<string>) {
+  constructor(props: FavesProps) {
     super(props);
     this.favesMap = {};
   }

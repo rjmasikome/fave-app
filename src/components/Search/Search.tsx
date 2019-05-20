@@ -9,12 +9,12 @@ import Faves from '../Faves/Faves';
 
 const ENTER_KEY_CODE = 13;
 
-class Search extends React.Component {
+class Search extends React.Component<GenericObject> {
 
   private searchTerm: string;
   private faves: GenericObject[];
 
-  constructor(props: React.Props<string>) {
+  constructor(props: GenericObject) {
     super(props);
     this.searchTerm = '';
     this.faves = [];
@@ -34,11 +34,11 @@ class Search extends React.Component {
       return;
     }
 
-    (this.props as Readonly<{request: any}>).request(this.searchTerm);
+    this.props.request(this.searchTerm);
   }
 
   private searchByClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    (this.props as Readonly<{request: any}>).request(this.searchTerm);
+    this.props.request(this.searchTerm);
   }
 
   private addToFaves(product: GenericObject) {
@@ -69,9 +69,9 @@ class Search extends React.Component {
           </div>
         </header>
         <Results
-          data={(this.props as any).data}
+          data={this.props.data}
           addToFaves={this.addToFaves.bind(this)}
-          isRequesting={(this.props as any).isRequesting}
+          isRequesting={this.props.isRequesting}
         />
         <Faves
           faves={this.faves}
