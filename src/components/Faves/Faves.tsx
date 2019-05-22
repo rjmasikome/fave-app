@@ -38,7 +38,7 @@ class Faves extends React.Component<FavesProps> {
   private generateProductsList(products: GenericObject[]) {
 
     if (!products || !products.length) {
-      return(<div></div>);
+      return;
     }
 
     const productsList =  products.map((product: GenericObject) => (

@@ -26,9 +26,7 @@ class Search extends React.Component<GenericObject> {
 
   private searchByEnter(event: React.KeyboardEvent<HTMLInputElement>) {
 
-    const keyCode =
-      (event as React.KeyboardEvent<HTMLInputElement>).keyCode ||
-      (event as React.KeyboardEvent<HTMLInputElement>).which;
+    const keyCode = event.keyCode || event.which;
 
     if (!keyCode || keyCode !== ENTER_KEY_CODE) {
       return;
@@ -59,7 +57,8 @@ class Search extends React.Component<GenericObject> {
           <div className='Search-FieldAndButton'>
             <input
               className='Search-TextField'
-              type='text' name='searchTerm'
+              type='text'
+              name='searchTerm'
               onChange={this.changeText.bind(this)}
               onKeyDown={this.searchByEnter.bind(this)}
             />

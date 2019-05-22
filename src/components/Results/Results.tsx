@@ -4,9 +4,9 @@ import './Results.css';
 import { GenericObject } from '../../controllers/type';
 
 interface ResultProps {
+  isRequesting: boolean,
   data: GenericObject,
   addToFaves: (prod: GenericObject) => void,
-  isRequesting: boolean,
 }
 
 class Results extends React.Component<ResultProps> {
